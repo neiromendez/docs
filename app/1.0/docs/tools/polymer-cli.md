@@ -377,5 +377,24 @@ command, with planned support for other commands in the future.
 *   `shell`
 *   `fragment`
 
-See [Build app](#build) for more information on how to use these options.
+See [Build app](#build) for more information on how to use these options. 
+
+Deploying the app via GitHub Pages
+
+You can deploy your apps quickly via:
+
+polymer github-pages:deploy --message "Optional commit message"
+This will do the following:
+
+creates GitHub repo for the current project if one doesn't exist
+
+creates a local gh-pages branch if one doesn't exist
+
+moves your app to the gh-pages branch and creates a commit
+
+edit the base tag in index.html to support github pages
+
+pushes the gh-pages branch to github
+
+Creating the repo requires a token from github, and the remaining functionality relies on ssh authentication for all git operations that communicate with github.com. To simplify the authentication, be sure to setup your ssh keys.
 
